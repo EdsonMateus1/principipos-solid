@@ -1,0 +1,7 @@
+O princípio de responsabilidade única é um princípio de programação de computador 
+que afirma que cada classe em um programa de computador deve ter responsabilidade 
+sobre uma única parte da funcionalidade desse 
+programa
+
+
+https://medium.com/xp-inc/os-princ%C3%ADpios-do-solid-srp-princ%C3%ADpio-da-responsabilidade-%C3%BAnica-7897c55694fe
