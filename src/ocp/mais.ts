@@ -4,10 +4,11 @@ import { Order } from "./classes/order";
 import { Product } from "./classes/product";
 import { SaveOrder } from "./services/saveOrder";
 import { ShoppingCard } from "./classes/shopping_cart";
-import { Discount, FiftyPercentDiscount } from "./classes/discount";
+import { Discount, FiftyPercentDiscount , TenPercentDiscount } from "./classes/discount";
 
-const discount = new FiftyPercentDiscount();
-const shoppingCard = new ShoppingCard(discount);
+const fiftydiscount = new FiftyPercentDiscount();
+const tenPercentDiscount = new TenPercentDiscount();
+const shoppingCard = new ShoppingCard(tenPercentDiscount);
 const messaging = new Messaging();
 const saveOrder = new SaveOrder();
 const order = new Order(shoppingCard, messaging, saveOrder);

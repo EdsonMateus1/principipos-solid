@@ -18,7 +18,7 @@ export class Order {
     }
 
     this._orderStatus = "closed";
-    this.messagin.sendMessage(`seu pedido tem ${this.cart.totalWithDiCount()}`);
+    this.messagin.sendMessage(`seu pedido tem ${this.cart.totalWithDiCount()} de desconto`);
     this.saveOrder.saveOrder();
     this.cart.clear();
   }
