@@ -4,11 +4,7 @@ import { Order } from "./classes/order";
 import { Product } from "./classes/product";
 import { SaveOrder } from "./services/saveOrder";
 import { ShoppingCard } from "./classes/shopping_cart";
-import {
-  Discount,
-  FiftyPercentDiscount,
-  TenPercentDiscount,
-} from "./classes/discount";
+import { Discount, FiftyPercentDiscount , TenPercentDiscount } from "./classes/discount";
 
 const fiftydiscount = new FiftyPercentDiscount();
 const tenPercentDiscount = new TenPercentDiscount();
