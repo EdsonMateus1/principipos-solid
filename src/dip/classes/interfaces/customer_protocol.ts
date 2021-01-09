@@ -3,6 +3,13 @@ export interface CustumerProtocol {
   lastName: string;
 }
 
-export interface IndividualProtocol extends CustumerProtocol {
+export interface IndividualProtocol {
+  firsName: string;
+  lastName: string;
   cpf: string;
+}
+
+
+export interface CustumerOrder {
+  getName(): string
 }

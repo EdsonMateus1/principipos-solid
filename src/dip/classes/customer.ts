@@ -1,6 +1,7 @@
 import {
   CustumerProtocol,
   IndividualProtocol,
+  CustumerOrder,
 } from "./interfaces/customer_protocol";
 
 // quebrando o pricipio pois IndividualCustomer implementa uma interface com uma
@@ -20,7 +21,8 @@ export class IndividualCustomer implements CustumerProtocol {
   }
 }
 
-export class IndividualCustomerCorrect implements IndividualProtocol {
+export class IndividualCustomerCorrect implements IndividualProtocol, CustumerOrder {
+
   firsName: string;
   lastName: string;
   cpf: string;
@@ -29,5 +31,9 @@ export class IndividualCustomerCorrect implements IndividualProtocol {
     this.firsName = firsName;
     this.lastName = lastName;
     this.cpf = cpf;
+  }
+  getName(): string {
+    return `seu cliente  ${this.firsName}  ${this.lastName}`;
+    throw new Error("Method not implemented.");
   }
 }

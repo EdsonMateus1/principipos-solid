@@ -5,13 +5,15 @@ import { Product } from "./classes/product";
 import { SaveOrder } from "./services/saveOrder";
 import { ShoppingCard } from "./classes/shopping_cart";
 import { Discount, FiftyPercentDiscount , TenPercentDiscount } from "./classes/discount";
+import { IndividualCustomerCorrect } from "./classes/customer";
 
 const fiftydiscount = new FiftyPercentDiscount();
 const tenPercentDiscount = new TenPercentDiscount();
 const shoppingCard = new ShoppingCard(tenPercentDiscount);
 const messaging = new Messaging();
 const saveOrder = new SaveOrder();
-const order = new Order(shoppingCard, messaging, saveOrder);
+const individualCustomer = new IndividualCustomerCorrect("fulano","de tal","12312")
+const order = new Order(shoppingCard, messaging, saveOrder,individualCustomer);
 shoppingCard.addItem(new Product("livro", 20));
 shoppingCard.addItem(new Product("caderno", 15));
 shoppingCard.addItem(new Product("caneta", 2.5));
@@ -20,4 +22,5 @@ console.log(shoppingCard.totalWithDiCount());
 console.log(shoppingCard.items);
 order.checkout();
 console.log(shoppingCard.items);
+console.log(order.getName());
 console.log(order.orderStatus);
