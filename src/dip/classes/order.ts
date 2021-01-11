@@ -1,18 +1,18 @@
 /* eslint-disable prettier/prettier */
-import { OrderSatus } from "./interfaces/order_status";
-import { Messaging } from "../services/messaging";
-import { SaveOrder } from "../services/saveOrder";
-import { ShoppingCard } from "./shopping_cart";
-import { CustumerOrder } from "./interfaces/customer_protocol";
+import { OrderStatus } from "./interfaces/order_status";
+import { CustomerOrder } from "./interfaces/customer_protocol";
+import { IShoppingCard } from "./interfaces/shopping_card";
+import { IMessaging } from "../services/interfaces/messaging";
+import { ISaveOrder } from "../services/interfaces/saveOrder";
 export class Order {
-  private _orderStatus: OrderSatus = "open";
+  private _orderStatus: OrderStatus = "open";
   constructor(
-    private readonly cart: ShoppingCard,
-    private readonly messagin: Messaging,
-    private readonly saveOrder: SaveOrder,
-    //aplicando o principio pois estou dependo de uma
-    //abstracao ou interface o que diminui o acoplamento no codigo
-    private readonly custumer: CustumerOrder
+    //aplicando o principio dpi pois estou dependo de uma
+    //abstracao ou interface o que diminui
+    private readonly cart: IShoppingCard,
+    private readonly messaging: IMessaging,
+    private readonly saveOrder: ISaveOrder,
+    private readonly customer: CustomerOrder
   ) {}
 
   checkout(): void {
@@ -22,7 +22,7 @@ export class Order {
     }
 
     this._orderStatus = "closed";
-    this.messagin.sendMessage(
+    this.messaging.sendMessage(
       `seu pedido tem ${this.cart.totalWithDiCount()} de desconto`
     );
     this.saveOrder.saveOrder();
@@ -32,6 +32,6 @@ export class Order {
     return this._orderStatus;
   }
   getName(): string {
-    return this.custumer.getName();
+    return this.customer.getName();
   }
 }

@@ -1,13 +1,13 @@
 import {
-  CustumerProtocol,
+  CustomerProtocol,
   IndividualProtocol,
-  CustumerOrder,
+  CustomerOrder 
 } from "./interfaces/customer_protocol";
 
-// quebrando o pricipio pois IndividualCustomer implementa uma interface com uma
-//caracteristica que nao ser usada
+// quebrando o pricipio ips pois IndividualCustomer implementa uma interface com uma
+//caracteristica que nao vai ser usada , sempre busque fazer interface mais expecificadas
 
-export class IndividualCustomer implements CustumerProtocol {
+export class IndividualCustomer implements CustomerProtocol {
   firsName: string;
   lastName: string;
   cpf: string;
@@ -21,17 +21,16 @@ export class IndividualCustomer implements CustumerProtocol {
   }
 }
 
-export class IndividualCustomerCorrect implements IndividualProtocol, CustumerOrder {
-
+export class IndividualCustomerCorrect implements IndividualProtocol, CustomerOrder {
   firsName: string;
   lastName: string;
   cpf: string;
-
   constructor(firsName: string, lastName: string, cpf: string) {
     this.firsName = firsName;
     this.lastName = lastName;
     this.cpf = cpf;
   }
+
   getName(): string {
     return `seu cliente  ${this.firsName}  ${this.lastName}`;
     throw new Error("Method not implemented.");

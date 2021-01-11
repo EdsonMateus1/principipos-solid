@@ -1,6 +1,9 @@
-export interface CustumerProtocol {
+export interface CustomerProtocol {
   firsName: string;
   lastName: string;
+  cpf: string;
+  cnpj: string;
+
 }
 
 export interface IndividualProtocol {
@@ -10,6 +13,6 @@ export interface IndividualProtocol {
 }
 
 
-export interface CustumerOrder {
+export interface CustomerOrder {
   getName(): string
 }

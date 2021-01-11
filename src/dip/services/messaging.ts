@@ -1,6 +1,8 @@
 /* eslint-disable prettier/prettier */
-export class Messaging {
+
+import { IMessaging } from "./interfaces/messaging";
+export class Messaging implements IMessaging {
   sendMessage(msg: string): void {
-    console.log(msg);
+    console.log("message sent" + msg);
   }
 }

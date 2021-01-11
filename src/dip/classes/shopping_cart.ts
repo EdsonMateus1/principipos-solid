@@ -1,9 +1,10 @@
 /* eslint-disable prettier/prettier */
 import { Discount } from "./discount";
 import { CardItem } from "./interfaces/cart_item";
+import { IShoppingCard } from "./interfaces/shopping_card";
 
-export class ShoppingCard {
-  private readonly _items: Array<CardItem> = [];
+export class ShoppingCard implements IShoppingCard {
+  _items: CardItem[] = [];
 
   constructor(private readonly discount: Discount) {}
 

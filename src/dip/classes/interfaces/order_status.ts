@@ -1,2 +1,2 @@
 /* eslint-disable prettier/prettier */
-export type OrderSatus = 'open' | 'closed';
+export type OrderStatus = 'open' | 'closed';
