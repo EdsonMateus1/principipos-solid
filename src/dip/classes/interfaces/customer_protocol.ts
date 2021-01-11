@@ -12,6 +12,13 @@ export interface IndividualProtocol {
   cpf: string;
 }
 
+export interface IndividualCustomerPremiumProtocol {
+  firsName: string;
+  lastName: string;
+  cpf: string;
+  star: string;
+}
+
 
 export interface CustomerOrder {
   getName(): string
