@@ -1,4 +1,4 @@
-io# SRP — Princípio da responsabilidade única
+# SRP — Princípio da responsabilidade única
  
 >Na programação, o Princípio da responsabilidade única declara que cada módulo ou classe deve ter responsabilidade sobre uma única parte da funcionalidade fornecida pelo software.
 Você pode ter ouvido a citação: “ Faça uma coisa e faça bem “.
