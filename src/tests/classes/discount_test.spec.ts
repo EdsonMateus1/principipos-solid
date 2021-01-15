@@ -3,7 +3,7 @@ import {
   Discount,
   FiftyPercentDiscount,
   TenPercentDiscount,
-} from "../discount";
+} from "../../classes/discount";
 
 const createSut = function (className: new () => Discount): Discount {
   return new className();

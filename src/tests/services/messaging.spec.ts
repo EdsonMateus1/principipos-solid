@@ -1,4 +1,4 @@
-import { Messaging } from "../messaging";
+import { Messaging } from "../../services/messaging";
 
 describe("Messaging", () => {
   afterEach(() => jest.clearAllMocks()); // limpa os mocks de teste
