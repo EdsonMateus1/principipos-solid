@@ -1,7 +1,6 @@
 import { CardItem } from "./cart_item";
 
 export abstract class IShoppingCard {
-  abstract readonly _items: Array<CardItem>;
   abstract totalWithDiCount(): number;
   abstract isEmpty(): boolean;
   abstract clear(): void;

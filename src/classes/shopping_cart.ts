@@ -4,7 +4,7 @@ import { CardItem } from "./interfaces/cart_item";
 import { IShoppingCard } from "./interfaces/shopping_card";
 
 export class ShoppingCard implements IShoppingCard {
-  _items: CardItem[] = [];
+  private _items: CardItem[] = [];
 
   constructor(private readonly discount: Discount) {}
 
@@ -36,5 +36,9 @@ export class ShoppingCard implements IShoppingCard {
 
   clear(): void {
     this._items.length = 0;
+  }
+
+  get qtdItems(): number {
+    return this._items.length;
   }
 }

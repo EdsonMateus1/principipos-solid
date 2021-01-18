@@ -9,7 +9,7 @@ import {
 //caracteristica que nao vai ser usada , sempre busque fazer interface mais expecificadas
 
 export class IndividualCustomer implements CustomerProtocol {
-  firsName: string;
+ firsName: string;
   lastName: string;
   cpf: string;
   cnpj: string;
